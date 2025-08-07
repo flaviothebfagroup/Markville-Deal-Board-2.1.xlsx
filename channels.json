@@ -9,8 +9,8 @@
     "logo": "https://example.com/sports-logo.png",
     "stream": "https://fl5.moveonjoy.com/TSN_5/index.m3u8"
   }
-]
-[
+
+
   {
     "name": "Cooking",
     "logo": "https://example.com/news-logo.png",
@@ -18,6 +18,13 @@
   },
   {
     "name": "Nature",
+    "logo": "https://example.com/sports-logo.png",
+    "stream": "https://fl5.moveonjoy.com/TSN_5/index.m3u8"
+  }
+
+ },
+  {
+    "name": "Kids",
     "logo": "https://example.com/sports-logo.png",
     "stream": "https://fl5.moveonjoy.com/TSN_5/index.m3u8"
   }
