@@ -1,40 +1,27 @@
 [
-{
-    "name": "TEST",
-    "logo": "-",
-    "stream": "https://script.google.com/macros/s/AKfycby04tj7iRgrOJdEUIxS9ymk_EwvBbdBfsf0gRL7QSj-oa9mjxu_ecf0UWC1rtdM2UB1/exec"
-  },
   {
     "name": "News",
-    "logo": "-",
+    "logo": "https://iili.io/32JSBig.pngg",
     "stream": "https://citynewsregional.akamaized.net/hls/live/1024052/Regional_Live_7/Video-2Mbps.m3u8"
   },
   {
     "name": "Sports",
-    "logo": "-",
+    "logo": "https://iili.io/32JSfx1.png",
     "stream": "https://fl5.moveonjoy.com/TSN_5/index.m3u8"
   },
   {
     "name": "Nature",
-    "logo": "https://example.com/sports-logo.png",
-    "stream": "https://fl5.moveonjoy.com/TSN_5/index.m3u8"
- },
+    "logo": "https://iili.io/32JS9lj.png",
+    "stream": "https://amchls.wns.live/hls/stream.m3u8"
+  },
   {
     "name": "Kids",
-    "logo": "https://example.com/sports-logo.png",
-    "stream": "https://fl5.moveonjoy.com/TSN_5/index.m3u8"
-  },
-
-  {
-    "name": "Nature Loop",
-    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Leaf_icon.svg/1024px-Leaf_icon.svg.png",
-    "stream": "https://www.w3schools.com/html/mov_bbb.mp4"
+    "logo": "https://iili.io/32JSHUx.png",
+    "stream": "https://c0c65b821b3542c3a4dca92702f59944.mediatailor.us-east-1.amazonaws.com/v1/master/04fd913bb278d8775298c26fdca9d9841f37601f/RakutenTV-eu_BabySharkTV/playlist.m3u8"
   },
   {
-    "name": "Ocean Loop",
-    "logo": "https://upload.wikimedia.org/wikipedia/commons/4/4f/Waves_icon.svg",
-    "stream": "https://filesamples.com/samples/video/mp4/sample_640x360.mp4"
+    "name": "Cooking",
+    "logo": "https://iili.io/32JSdHQ.png",
+    "stream": "https://gusto-xumo.amagi.tv/playlist.m3u8"
   }
-
-
 ]
