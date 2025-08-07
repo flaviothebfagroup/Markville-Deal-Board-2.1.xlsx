@@ -1,0 +1,37 @@
+body {
+  font-family: Arial;
+  display: flex;
+  background: #111;
+  color: white;
+}
+
+#channel-list {
+  width: 200px;
+  background: #222;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#channel-list button {
+  background: #333;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  text-align: left;
+}
+
+#video-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: black;
+}
+
+video {
+  width: 100%;
+  max-width: 800px;
+}
