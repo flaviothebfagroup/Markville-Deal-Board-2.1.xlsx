@@ -28,4 +28,17 @@
     "logo": "https://example.com/sports-logo.png",
     "stream": "https://fl5.moveonjoy.com/TSN_5/index.m3u8"
   }
+
+  {
+    "name": "Nature Loop",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Leaf_icon.svg/1024px-Leaf_icon.svg.png",
+    "stream": "https://www.w3schools.com/html/mov_bbb.mp4"
+  },
+  {
+    "name": "Ocean Loop",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/4/4f/Waves_icon.svg",
+    "stream": "https://filesamples.com/samples/video/mp4/sample_640x360.mp4"
+  }
+
+
 ]
