@@ -2,7 +2,28 @@ async function loadChannels() {
   const res = await fetch("channels.json");
   const channels = await res.json();
   const list = document.getElementById("channel-list");
-  const player = document.getElementById("videoPlayer");
+  const video = document.getElementById("videoPlayer");
+
+  let hls = null;
+
+  function playStream(url) {
+    if (hls) {
+      hls.destroy();
+      hls = null;
+    }
+
+    if (Hls.isSupported() && url.endsWith('.m3u8')) {
+      hls = new Hls();
+      hls.loadSource(url);
+      hls.attachMedia(video);
+      hls.on(Hls.Events.MANIFEST_PARSED, () => {
+        video.play().catch(console.warn);
+      });
+    } else {
+      video.src = url;
+      video.play().catch(console.warn);
+    }
+  }
 
   channels.forEach((channel, index) => {
     const btn = document.createElement("div");
@@ -11,16 +32,12 @@ async function loadChannels() {
       <img src="${channel.logo}" alt="${channel.name}" />
       <span>${channel.name}</span>
     `;
-    btn.onclick = () => {
-      player.src = channel.stream;
-      player.load();
-      player.play().catch(console.warn);
-    };
+    btn.onclick = () => playStream(channel.stream);
     list.appendChild(btn);
 
-    // Auto-play first channel
+    // Auto-play first channel on load
     if (index === 0) {
-      player.src = channel.stream;
+      playStream(channel.stream);
     }
   });
 }
