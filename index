@@ -41,7 +41,7 @@
   <script>
     const video = document.getElementById("iptvPlayer");
     const loadingGif = document.getElementById("loadingGif");
-    const scriptURL = "YOUR_WEB_APP_URL"; // 🔁 replace with your Google Apps Script web app URL
+    const scriptURL = "https://script.google.com/macros/s/AKfycbzLqWBM2jqSO0w2EQhkCFH6agjblVvgpNAjalpIUjyuKbPR44uAXl5TpzlBbxGpgL6-/exec"; // 🔁 replace with your Google Apps Script web app URL
     let hls = null;
     let currentUrl = "";
 
