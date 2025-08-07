@@ -2,10 +2,22 @@
   {
     "name": "News",
     "logo": "https://example.com/news-logo.png",
-    "stream": "https://example.com/news.m3u8"
+    "stream": "https://citynewsregional.akamaized.net/hls/live/1024052/Regional_Live_7/Video-2Mbps.m3u8"
   },
   {
     "name": "Sports",
+    "logo": "https://example.com/sports-logo.png",
+    "stream": "https://fl5.moveonjoy.com/TSN_5/index.m3u8"
+  }
+]
+[
+  {
+    "name": "Cooking",
+    "logo": "https://example.com/news-logo.png",
+    "stream": "https://citynewsregional.akamaized.net/hls/live/1024052/Regional_Live_7/Video-2Mbps.m3u8"
+  },
+  {
+    "name": "Nature",
     "logo": "https://example.com/sports-logo.png",
     "stream": "https://fl5.moveonjoy.com/TSN_5/index.m3u8"
   }
