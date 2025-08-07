@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>IPTV Player</title>
+  <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    .video-container {
+        width: 1280px;
+        height: 720px;
+        background-color: black;
+    }
+    .video-container video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .gif-container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: none;
+        z-index: 2;
+    }
+    .gif-container img {
+        width: 150px;
+    }
+  </style>
+</head>
+<body>
+  <div class="video-container">
+    <video id="iptvPlayer" autoplay muted playsinline></video>
+  </div>
+
+  <div class="gif-container" id="loadingGif">
+    <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExOHF4M3ZrZ2Z3OHN4bTJ1Y2h1cnJrdnh1b2xxaHd1OWdtOTRiNDBnNiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/oKpcpbCmiacACmTAfw/giphy.gif" alt="Loading...">
+  </div>
+
+  <script>
+    const video = document.getElementById("iptvPlayer");
+    const loadingGif = document.getElementById("loadingGif");
+    const scriptURL = "YOUR_WEB_APP_URL"; // 🔁 replace with your Google Apps Script web app URL
+    let hls = null;
+    let currentUrl = "";
+
+    function updateChannel() {
+      fetch(scriptURL)
+        .then(response => response.text())
+        .then(newUrl => {
+          if (newUrl && newUrl !== currentUrl) {
+            currentUrl = newUrl;
+            playStream(newUrl);
+          }
+        })
+        .catch(err => console.error("Fetch error:", err));
+    }
+
+    function playStream(url) {
+      loadingGif.style.display = "block";
+
+      if (hls) {
+        hls.destroy();
+        hls = null;
+      }
+
+      video.pause();
+      video.removeAttribute('src');
+      video.load();
+
+      if (Hls.isSupported()) {
+        hls = new Hls();
+        hls.loadSource(url);
+        hls.attachMedia(video);
+        hls.on(Hls.Events.MANIFEST_PARSED, function () {
+          video.play().then(() => loadingGif.style.display = "none");
+        });
+      } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+        video.src = url;
+        video.addEventListener('loadedmetadata', function () {
+          video.play();
+          loadingGif.style.display = "none";
+        });
+      } else {
+        console.error("HLS not supported.");
+      }
+    }
+
+    updateChannel();
+    setInterval(updateChannel, 5000);
+  </script>
+</body>
+</html>
