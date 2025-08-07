@@ -10,15 +10,6 @@
     "stream": "https://fl5.moveonjoy.com/TSN_5/index.m3u8"
   },
   {
-    "name": "Cooking",
-    "logo": "-",
-    "stream": "<video autoplay muted playsinline loop
-       src="https://www.w3schools.com/html/mov_bbb.mp4"
-       style="width:100vw; height:100vh;">
-</video>
-"
-  },
-  {
     "name": "Nature",
     "logo": "https://example.com/sports-logo.png",
     "stream": "https://fl5.moveonjoy.com/TSN_5/index.m3u8"
@@ -27,7 +18,7 @@
     "name": "Kids",
     "logo": "https://example.com/sports-logo.png",
     "stream": "https://fl5.moveonjoy.com/TSN_5/index.m3u8"
-  }
+  },
 
   {
     "name": "Nature Loop",
