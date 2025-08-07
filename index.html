@@ -2,17 +2,17 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Signagelive Video Player</title>
+  <title>Pluto-Style IPTV</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="app">
-    <div class="sidebar" id="channel-list">
-      <h2>Channels</h2>
-    </div>
-    <div class="player-container">
-      <video id="player" autoplay muted playsinline loop controls></video>
-    </div>
+    <aside class="sidebar" id="channel-list">
+      <h1>Live Channels</h1>
+    </aside>
+    <main class="player">
+      <video id="videoPlayer" controls autoplay muted playsinline></video>
+    </main>
   </div>
   <script src="script.js"></script>
 </body>
